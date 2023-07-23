@@ -79,10 +79,6 @@
                         $this->messageManager->addErrorMessage($message);
                         
                         // Fix for success message showing up even though the product has been removed from cart
-                        $removeSuccessClass = $this->pageConfig->getElementAttribute(
-                            'body',
-                            'class',
-                        );
                         $this->pageConfig->addBodyClass( 'remove-success-message');
                     }
         
