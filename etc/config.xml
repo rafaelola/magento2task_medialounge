@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <ml_developertest>
+            <defaults>
+                <feature_enabled>1</feature_enabled>
+            </defaults>
+            <display>
+                <restricted_message><![CDATA[I’m sorry, this product cannot be ordered from]]></restricted_message>
+            </display>
+            <ip_to_country_geoip>
+                <api_key><![CDATA[8a0cbd8011ad6ed41d1d0dfc86aaa237]]></api_key>
+                <api_url><![CDATA[http://api.ipapi.com/]]></api_url>
+            </ip_to_country_geoip>
+        </ml_developertest>
+    </default>
+</config>

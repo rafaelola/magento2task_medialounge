@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="developertest" translate="label" sortOrder="100">
+            <label>Restricted Products Countries Settings</label>
+        </tab>
+        <section id="ml_developertest" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>Restricted To Countries</label>
+            <tab>developertest</tab>
+            <resource>ML_DeveloperTest::restrictedcountries_config</resource>
+            <group id="defaults" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Defaults</label>
+                <field id="feature_enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Enable Feature</label>
+                    <comment>This will enable the feature</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+            </group>
+            <group id="display" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" >
+                <label>Display Settings</label>
+                <field id="restricted_message" translate="label" type="textarea" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Restricted Message</label>
+                    <comment>This is the message that will be displayed to the user when they are restricted from purchasing a product</comment>
+                </field>
+            </group>
+            <group id="ip_to_country_geoip" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>IP 2 Country GeoIP</label>
+                <field id="api_key" translate="label" type="text" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>API KEY</label>
+                    <comment>This is the API key for the IP 2 Country GeoIP service</comment>
+                </field>
+                <field id="api_url" translate="label" type="text" sortOrder="30" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>API URL</label>
+                    <comment>This is the API URL for the IP 2 Country GeoIP service</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
