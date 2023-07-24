@@ -43,7 +43,7 @@
             $url = sprintf('%s%s?access_key=%s',$this->configHelper->getIp2CountryApiUrl(),$ip,$access_key);
             $this->curl->get($url);
             $response = json_decode($this->curl->getBody(), true, 512, JSON_THROW_ON_ERROR);
-            if(isset($response['error']) && $response['error'] === true){
+            if(isset($response['error'])){
                 $this->logger->critical(sprintf('Info:%s Code:%s, Type:%s',$response['error']['info'],$response['error']['code'],$response['error']['type']));
                 return 'API error';
             }
