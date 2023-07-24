@@ -38,8 +38,7 @@
          */
         public function getCustomerCountryCode(): string
         {
-           // $ip = $this->remoteAddress->getRemoteAddress();
-            $ip = '161.185.160.93';
+            $ip = $this->remoteAddress->getRemoteAddress();
             $access_key = $this->configHelper->getIp2CountryApiKey();
             $url = sprintf('%s%s?access_key=%s',$this->configHelper->getIp2CountryApiUrl(),$ip,$access_key);
             $this->curl->get($url);
