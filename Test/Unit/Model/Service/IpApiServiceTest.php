@@ -114,4 +114,5 @@
                 ->with(sprintf('Info:%s Code:%s, Type:%s',$result['error']['info'],$result['error']['code'],$result['error']['type']));
             $this->assertEquals('API error', $this->ipApiServiceMock->getCustomerCountryCode());
         }
+       
     }
