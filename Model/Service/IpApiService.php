@@ -59,7 +59,8 @@
         
         public function isFeatureEnabled(): bool
         {
-            return $this->configHelper->getFeatureEnabled();
+            $isEnabled = (int)$this->configHelper->getFeatureEnabled();
+            return $isEnabled === 1;
         }
         
         public function getCountryNameByCode(string $code): string
