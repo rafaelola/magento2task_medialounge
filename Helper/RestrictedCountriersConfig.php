@@ -20,9 +20,9 @@
             parent::__construct($context);
         }
         
-        public function getFeatureEnabled(): string
+        public function getFeatureEnabled(): bool
         {
-            return $this->getConfiguredValue('ml_developertest/defaults/feature_enabled');
+            return $this->getConfiguredFlag('ml_developertest/defaults/feature_enabled');
         }
         
         public function getRestrictedMessage(): string
@@ -46,6 +46,11 @@
         private function getConfiguredValue($config_path, $scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT):string
         {
             return $this->scopeConfig->getValue($config_path, $scope);
+        }
+    
+        public function getConfiguredFlag($config_path, $scope = ScopeConfigInterface::SCOPE_TYPE_DEFAULT): bool
+        {
+            return $this->scopeConfig->isSetFlag($config_path, $scope);
         }
         
     
