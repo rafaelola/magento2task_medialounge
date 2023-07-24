@@ -47,6 +47,21 @@
                 $this->countryFactoryMock
             );
             
-           
+        }
+        
+        public function testGetIsFeatureEnabled(): void
+        {
+            $this->configHelperMock->expects($this->once())
+                ->method('getFeatureEnabled')
+                ->willReturn(true);
+            $this->assertTrue($this->ipApiServiceMock->isFeatureEnabled());
+        }
+        
+        public function testGetRestrictedErrorMessage()
+        {
+            $this->configHelperMock->expects($this->once())
+                ->method('getRestrictedMessage')
+                ->willReturn('I’m sorry, this product cannot be ordered from');
+            $this->assertEquals('I’m sorry, this product cannot be ordered from',$this->ipApiServiceMock->getRestrictedErrorMessage());
         }
     }
