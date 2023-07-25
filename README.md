@@ -85,3 +85,5 @@ The GeoIP Product Restriction module provides the following functionality:
 6. The message shown to customers when they cannot order a restricted product is customizable 
    using the {COUNTRY_NAME} variable, which will be replaced with the actual name of the customer's country.
 7. The latest version of Magento Open Source has been used for development to ensure compatibility and access to the latest features
+
+## Unit Testing
